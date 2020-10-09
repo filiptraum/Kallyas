@@ -1,0 +1,17 @@
+/* standart */
+a:focus,
+button:focus,
+input:focus {
+  outline: none;
+}
+
+/* home */
+.header__item a:hover:after,
+.header__item a:focus:after {
+  width: 100%;
+}
+
+.home__link:hover,
+.home__link:focus {
+  background: #fb414e;
+}
