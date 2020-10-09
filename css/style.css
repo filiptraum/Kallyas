@@ -77,6 +77,10 @@ html {
   transition: all .5s linear;
 }
 
+.to-download {
+  display: none;
+}
+
 /* home */
 
 .home {
