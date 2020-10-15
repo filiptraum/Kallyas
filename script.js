@@ -122,3 +122,22 @@ const changeBtn = (itemsSelector, btnSelector, contentSelector, classHidden, act
 changeBtn(".works__list", ".works__button", ".works__box", "hidden_image", "active", "works_box-anim");
 
 // playVideo
+function playVideo(videoSelector, btnSelector) {
+
+  const video = document.querySelector(videoSelector);
+  const btn = document.querySelector(btnSelector);
+
+  let videoPlaying = false;
+
+  btn.addEventListener('click', () => {
+    if(!videoPlaying) {
+      video.setAttribute('src', 'https://www.youtube.com/embed/kproPsch7i0?autoplay=1&mute=1');
+      videoPlaying = true;
+    }else {
+      video.setAttribute('src', 'https://www.youtube.com/embed/kproPsch7i0');
+      videoPlaying = false;
+    }
+  }); 
+}
+
+playVideo(".statistic__iframe-video", ".statistic__button");
