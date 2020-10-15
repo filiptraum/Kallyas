@@ -15,3 +15,63 @@ input:focus {
 .home__link:focus {
   background: #fb414e;
 }
+
+/* services */
+.feautures-cards__item:hover {
+  background: #fb414e;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 10px black;
+}
+
+.services-item:hover .services-item__text {
+  color:black;
+}
+
+/* about */
+.about__btn:hover,
+.about__btn:focus {
+  background:#fb414e;
+  border-color:#fb414e;
+}
+
+/* works */
+.works__button:not(.active):hover:after,
+.works__button:not(.active):focus:after {
+  width: 100%;
+}
+
+.works__button.active:focus {
+  transform: translateY(-10px);
+}
+
+.works__box img:hover {
+  transform: scale(1.2);
+}
+
+/* statictic */
+.statistic__button:hover,
+.statistic__button:focus {
+  background:#1f1f1f;
+  color:white;
+}
+
+
+/* keyframes */
+
+/* scale 1 to 0.5 */
+@keyframes scales {
+  from {
+    transform:scale(1);
+  }to {
+    transform:scale(.5);
+  }
+}
+
+/* translateX */
+@keyframes workAnim {
+  from {
+    transform: scale(0) rotateX(90deg);
+  }to {
+    transform: scale(1) rotateX(0deg);
+  }
+}
