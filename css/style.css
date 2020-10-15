@@ -557,7 +557,6 @@ html {
 
 .works__box img {
   max-width: 100%;
-  transition: transform 4s linear;
 }
 
 .works__box.hidden_image {

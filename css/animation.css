@@ -24,14 +24,14 @@ input:focus {
 }
 
 .services-item:hover .services-item__text {
-  color:black;
+  color: black;
 }
 
 /* about */
 .about__btn:hover,
 .about__btn:focus {
-  background:#fb414e;
-  border-color:#fb414e;
+  background: #fb414e;
+  border-color: #fb414e;
 }
 
 /* works */
@@ -44,15 +44,11 @@ input:focus {
   transform: translateY(-10px);
 }
 
-.works__box img:hover {
-  transform: scale(1.2);
-}
-
 /* statictic */
 .statistic__button:hover,
 .statistic__button:focus {
-  background:#1f1f1f;
-  color:white;
+  background: #1f1f1f;
+  color: white;
 }
 
 
@@ -61,17 +57,25 @@ input:focus {
 /* scale 1 to 0.5 */
 @keyframes scales {
   from {
-    transform:scale(1);
-  }to {
-    transform:scale(.5);
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(.5);
   }
 }
 
 /* translateX */
 @keyframes workAnim {
-  from {
-    transform: scale(0) rotateX(90deg);
-  }to {
-    transform: scale(1) rotateX(0deg);
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1) scaleX(1) rotateX(0deg);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(0.5) scaleX(0.5) rotateX(90deg);
   }
 }
