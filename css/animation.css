@@ -65,7 +65,7 @@ input:focus {
   }
 }
 
-/* translateX */
+/* WorkAnim */
 @keyframes workAnim {
 
   0%,
@@ -74,8 +74,8 @@ input:focus {
     transform: scale(1) scaleX(1) rotateX(0deg);
   }
 
-  50% {
+  30% {
     opacity: 0;
-    transform: scale(0.5) scaleX(0.5) rotateX(90deg);
+    transform: scale(0.5) scaleX(0.2) rotateX(90deg);
   }
 }
