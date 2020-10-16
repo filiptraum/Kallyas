@@ -238,6 +238,15 @@
   }
 }
 
+/* 623px */
+@media screen and (max-width:623px) {
+
+  /* footer */
+  .footer {
+    padding-top: 10px;
+  }
+}
+
 /* 581px */
 @media screen and (max-width:582px) {
 
@@ -317,6 +326,12 @@
   .details__box:first-child {
     margin-right: 0px;
     margin-bottom: 60px;
+  }
+
+  /* footer */
+  .footer__author {
+    padding-right: 0;
+    margin-bottom: 5px;
   }
 }
 
