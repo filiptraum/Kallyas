@@ -21,6 +21,52 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   gabmurgerFunc(".gamburger", ".header__nav");
 
+  // scroll-up
+  const wrapper = document.querySelector('.wrapper');
+  if (wrapper.clientWidth > 850) {
+
+    // scroll-up
+    const offset = 700;
+    const scrollUp = document.querySelector(".scroll-up");
+    const scrollUpSvgPath = document.querySelector(".scroll-up__svg-path");
+    const pathLength = scrollUpSvgPath.getTotalLength();
+
+    scrollUpSvgPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
+    scrollUpSvgPath.style.transition = 'stroke-dashoffset 20ms';
+
+    const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
+
+    const updateDashoffset = () => {
+      const height = document.documentElement.scrollHeight - window.innerHeight;
+      const dashoffset = pathLength - (getTop() * pathLength / height);
+
+      scrollUpSvgPath.style.strokeDashoffset = dashoffset;
+    }
+
+    window.addEventListener("scroll", () => {
+      // scroll up
+      updateDashoffset();
+
+      if (getTop() > offset) {
+        // scroll up
+        scrollUp.classList.add("scroll-up_active");
+        // fixed-slider
+      } else {
+        // scroll up
+        scrollUp.classList.remove("scroll-up_active");
+      }
+    });
+
+    scrollUp.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    updateDashoffset();
+  }
+
   // bgChanging
   function bgChanging(bgSectionSelector) {
 

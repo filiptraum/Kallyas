@@ -51,6 +51,11 @@ input:focus {
   color: white;
 }
 
+/* footer */
+.footer__icon:hover path {
+  fill:#fb414e;
+}
+
 
 /* keyframes */
 
