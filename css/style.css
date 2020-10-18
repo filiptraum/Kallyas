@@ -269,11 +269,15 @@ html {
   font-size: 60px;
   max-width: 881px;
   margin: 0 auto;
+  opacity:0;
+  transform:translateY(50%);
 }
 
 .home__text {
   margin: 60px auto 65px auto;
   max-width: 648px;
+  opacity:0;
+  transform:translateY(-100%);
 }
 
 .home__links-block {
@@ -283,11 +287,16 @@ html {
 }
 
 .home__link {
-  transition: all .5s linear;
+  opacity:0;
 }
 
 .home__link:first-child {
   margin-right: 30px;
+  transform:translateX(-70%);
+}
+
+.home__link:last-child {
+  transform:translateX(70%);
 }
 
 /* services */
@@ -301,13 +310,15 @@ html {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 -15px;
-  transform: translateY(-85px);
+  transform: translateY(-33px);
 }
 
 .feautures-cards__box {
   padding: 0 15px;
   flex: 0 1 33.33%;
   margin-bottom: 30px;
+  opacity:0;
+  transform: translateY(33%);
 }
 
 .feautures-cards__item {
@@ -326,10 +337,15 @@ html {
 .feautures-cards__subtitle:after {
   content: '';
   display: block;
-  width: 50px;
-  height: 3px;
+  width: 0px;
+  height: 2.5px;
   background-color: #ffffff;
   margin: 30px 0;
+}
+
+.feautures-cards__text {
+  opacity:0;
+  transform: translateY(33%);
 }
 
 .services__subtitle {
@@ -337,6 +353,8 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  opacity:0;
+  transform: translateY(120%);
 }
 
 .services__title {
@@ -344,6 +362,7 @@ html {
   font-size: 60px;
   margin: 10px 0 45px 0;
   text-align: center;
+  opacity:0;
 }
 
 .services__title span {
@@ -356,6 +375,8 @@ html {
   margin: 0 auto;
   max-width: 679px;
   margin-bottom: 127px;
+  opacity:0;
+  transform: translateY(-100%);
 }
 
 .services__block {
@@ -383,13 +404,15 @@ html {
   color: #1f1f1f;
   font-size: 32px;
   text-align: center;
+  opacity:0;
 }
 
 .services-item__text {
   max-width: 297px;
   color: #838383;
   text-align: center;
-  transition: all .5s linear;
+  opacity:0;
+  transform:translateY(50%);
 }
 
 /* about */
@@ -410,14 +433,23 @@ html {
   padding-right: 30px;
 }
 
+.about__title {
+  opacity: 0;
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+
 .about__text {
   max-width: 557px;
   margin: 50px 0;
+  opacity: 0;
+  transform-origin: left;
+  transform: rotateY(90deg);
 }
 
 .about__btn {
   border-color: white;
-  transition: all .5s linear;
+  opacity: 0;
 }
 
 .about__pictures {
@@ -515,12 +547,14 @@ html {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 17px;
+  opacity:0;
 }
 
 .feautures__description {
   max-width: 265px;
   color: #838383;
   line-height: 28px;
+  opacity:0;
 }
 
 .feautures__body {
@@ -530,15 +564,26 @@ html {
 .feautures__title {
   color: #1f1f1f;
   margin-bottom: 50px;
+  text-align: right;
+  opacity: 0;
+  transform-origin: right;
+  transform: rotateY(90deg);
 }
 
 .feautures__text {
   color: #838383;
+  text-align: right;
   line-height: 28px;
 }
 
+
 .feautures__text p:first-child {
   margin-bottom: 25px;
+}
+
+.feautures__text p._anim-items {
+  opacity: 0;
+  transform: translateY(50%);
 }
 
 /* works */
@@ -572,7 +617,7 @@ html {
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
-  transition: all .5s linear;
+  opacity:0;
 }
 
 .works__button:after {
@@ -641,17 +686,23 @@ html {
 
 .statistic__title {
   max-width: 625px;
+  opacity: 0;
+  transform-origin: left;
+  transform: rotateY(90deg);
 }
 
 .statistic__text {
   max-width: 587px;
   margin: 52px 0;
+  opacity: 0;
+  transform-origin: left;
+  transform: rotateY(90deg);
 }
 
 .statistic__button {
   color: #1f1f1f;
   border-color: #1f1f1f;
-  transition: 0.1s linear;
+  opacity: 0;
 }
 
 .statistic__video {
@@ -684,6 +735,7 @@ html {
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1 1 50%;
+  opacity: 0;
 }
 
 .partners__block {
@@ -710,11 +762,17 @@ html {
 .partners__title {
   max-width: 608px;
   margin: 0 0 40px auto;
+  opacity: 0;
+  transform-origin: right;
+  transform: rotateY(90deg);
 }
 
 .partners__text {
   max-width: 564px;
   margin-left: auto;
+  opacity: 0;
+  transform-origin: right;
+  transform: rotateY(90deg);
 }
 
 /* details */
@@ -735,6 +793,9 @@ html {
 .details__title {
   max-width: 516px;
   color: #1f1f1f;
+  opacity:0;
+  transform-origin: left;
+  transform: rotateY(90deg);
 }
 
 .details__text {
@@ -742,6 +803,9 @@ html {
   color: #838383;
   line-height: 28px;
   margin: 40px 0 52px 0;
+  opacity:0;
+  transform-origin: left;
+  transform: rotateY(90deg);
 }
 
 .details__items {
@@ -766,12 +830,14 @@ html {
   color: #5e5e5e;
   font-size: 20px;
   margin: 13px 0 23px 0;
+  opacity: 0;
 }
 
 .details__description {
   color: #838383;
   line-height: 28px;
   max-width: 297px;
+  opacity: 0;
 }
 
 /* footer */
@@ -836,4 +902,124 @@ html {
 .footer__youtube {
   width: 26px;
   height: 26px;
+}
+
+/* JS animation */
+
+._anim-active {
+  opacity:1 !important;
+}
+
+.services__box:nth-child(1) .services-item__title._anim-active,
+.about__title._anim-active,
+.feautures__title._anim-active,
+.statistic__title._anim-active,
+.partners__title._anim-active,
+.details__title._anim-active {
+  transition: all 0.8s linear .3s;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.partners__pictures._anim-active,
+.details__box:nth-child(1) .details__subtitle._anim-active {
+  transition: all 0.8s linear .4s;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+
+.feautures-cards__box:nth-child(2) .feautures-cards__subtitle._anim-active:after,
+.services__title._anim-active,
+.services__subtitle._anim-active,
+.services-item__title._anim-active,
+.services__box:nth-child(2) .services-item__title._anim-active,
+.services__box:nth-child(1) .services-item__text._anim-active,
+.about__text._anim-active,
+.feautures__text p._anim-active,
+.feautures__box:nth-child(1) .feautures__subtitle._anim-active,
+.works__button._anim-active,
+.statistic__text._anim-active,
+.partners__text._anim-active,
+.details__text._anim-active {
+  transition: all 0.8s linear .5s;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.home__title._anim-active,
+.services__text._anim-active,
+.feautures-cards__box:nth-child(1)._anim-active,
+.feautures-cards__box:last-child .feautures-cards__subtitle._anim-active:after,
+.feautures-cards__box:nth-child(1) .feautures-cards__text._anim-active,
+.about__btn._anim-active,
+.feautures__box:nth-child(1) .feautures__description._anim-active,
+.details__box:nth-child(2) .details__subtitle._anim-active,
+.details__box:nth-child(1) .details__description._anim-active {
+  transition: all 0.8s linear .6s, background .5s linear, border-color .5s linear;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.feautures-cards__box:nth-child(2)._anim-active,
+.feautures-cards__box:nth-child(2) .feautures-cards__text._anim-active,
+.services__box:nth-child(3) .services-item__title._anim-active,
+.services__box:nth-child(2) .services-item__text._anim-active,
+.feautures__box:nth-child(2) .feautures__subtitle._anim-active {
+  transition: all 0.8s linear .7s;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.home__text._anim-active,
+.feautures-cards__box:last-child._anim-active,
+.feautures-cards__box:last-child .feautures-cards__text._anim-active,
+.services__box:nth-child(6) .services-item__title._anim-active,
+.services__box:nth-child(5) .services-item__text._anim-active,
+.feautures__box:nth-child(2) .feautures__description._anim-active,
+.details__box:nth-child(2) .details__description._anim-active {
+  transition: all 0.8s linear .8s;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.home__link._anim-active,
+.services__box:nth-child(4) .services-item__title._anim-active,
+.services__box:nth-child(3) .services-item__text._anim-active,
+.feautures__box:nth-child(3) .feautures__subtitle._anim-active {
+  transition: all 0.8s linear .9s, background .5s linear;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.feautures__box:nth-child(3) .feautures__description._anim-active {
+  transition: all 0.8s linear 1s, background .5s linear;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.services__box:nth-child(5) .services-item__title._anim-active,
+.services__box:nth-child(4) .services-item__text._anim-active,
+.feautures__box:nth-child(4) .feautures__subtitle._anim-active {
+  transition: all 0.8s linear 1.1s, background .5s linear;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.feautures__box:nth-child(4) .feautures__description._anim-active {
+  transition: all 0.8s linear 1.2s, background .5s linear;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.services__box:nth-child(6) .services-item__title._anim-active,
+.services__box:nth-child(5) .services-item__text._anim-active {
+  transition: all 0.8s linear 1.3s, background .5s linear;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.services__box:nth-child(6) .services-item__text._anim-active {
+  transition: all 0.8s linear 1.5s, background .5s linear;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.feautures-cards__subtitle._anim-active:after {
+  width: 50px;
+  transition: all 0.8s linear .4s;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+}
+
+.statistic__button._anim-active {
+  transition: opacity 0.8s linear .6s, color .1s linear, background .1s linear;
+  transform: translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
 }

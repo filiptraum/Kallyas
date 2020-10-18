@@ -10,10 +10,12 @@
   .about__title {
     margin: 0 auto;
     max-width: 625px;
+    transform: translateY(50%);
   }
 
   .about__text {
     margin: 50px auto;
+    transform: translateY(-50%);
   }
 
   .about__btn {
@@ -40,8 +42,13 @@
     text-align: center;
   }
 
+  .statistic__title {
+    transform: translateY(50%);
+  }
+
   .statistic__text {
     margin: 52px auto;
+    transform: translateY(-50%);
   }
 
   .statistic__button {
@@ -65,10 +72,12 @@
 
   .partners__title {
     margin: 0 auto 40px auto;
+    transform: translateY(50%);
   }
 
   .partners__text {
     margin: 0 auto;
+    transform: translateY(-50%);
   }
 }
 
@@ -93,10 +102,13 @@
 
   .feautures__title {
     margin: 0 auto 27px auto;
+    text-align: center;
+    transform: translateY(-70%);
   }
 
   .feautures__text {
     margin: 0 auto;
+    text-align: center;
   }
 
   /* details */
@@ -117,6 +129,14 @@
   .details__text,
   .details__title {
     text-align: center;
+  }
+
+  .details__title {
+    transform: translateY(50%);
+  }
+
+  .details__text {
+    transform: translateY(-50%);
   }
 }
 
@@ -283,15 +303,16 @@
   }
 
   .partners__block img:first-child {
-  margin-right: 0px;
+    margin-right: 0px;
   }
 
-.partners__block:first-child img {
-  margin-bottom: 30px;
-}
-.partners__block:last-child img:first-child {
-  margin-bottom: 30px;
-}
+  .partners__block:first-child img {
+    margin-bottom: 30px;
+  }
+
+  .partners__block:last-child img:first-child {
+    margin-bottom: 30px;
+  }
 }
 
 /* 500px */
@@ -309,6 +330,25 @@
   /* services */
   .services__box {
     flex: 0 1 100%;
+  }
+
+  .services__box:nth-child(1) .services-item__title._anim-active,
+  .services__box:nth-child(2) .services-item__title._anim-active,
+  .services__box:nth-child(3) .services-item__title._anim-active,
+  .services__box:nth-child(4) .services-item__title._anim-active,
+  .services__box:nth-child(5) .services-item__title._anim-active,
+  .services__box:nth-child(6) .services-item__title._anim-active {
+    transition: 0.8s linear .3s;
+  }
+
+  
+  .services__box:nth-child(1) .services-item__text._anim-active,
+  .services__box:nth-child(2) .services-item__text._anim-active,
+  .services__box:nth-child(3) .services-item__text._anim-active,
+  .services__box:nth-child(4) .services-item__text._anim-active,
+  .services__box:nth-child(5) .services-item__text._anim-active,
+  .services__box:nth-child(6) .services-item__text._anim-active {
+    transition: 0.8s linear .5s;
   }
 
   /* works */
