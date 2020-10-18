@@ -283,16 +283,15 @@
   }
 
   .partners__block img:first-child {
-    margin-right: 0;
+  margin-right: 0px;
   }
 
-  .partners__block img {
-    margin-bottom: 30px;
-  }
-
-  .partners__block:last-child img:last-child {
-    margin-bottom: 0;
-  }
+.partners__block:first-child img {
+  margin-bottom: 30px;
+}
+.partners__block:last-child img:first-child {
+  margin-bottom: 30px;
+}
 }
 
 /* 500px */

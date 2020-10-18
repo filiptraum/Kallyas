@@ -117,9 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   twoFonChanging(".about__pictures");
 
-});
-
-// changeBtn
+  // changeBtn
 const changeBtn = (itemsSelector, btnSelector, contentSelector, classHidden, activeBtn, classAnim) => {
 
   const itemsBlock = document.querySelector(itemsSelector);
@@ -166,3 +164,48 @@ const changeBtn = (itemsSelector, btnSelector, contentSelector, classHidden, act
 };
 
 changeBtn(".works__list", ".works__button", ".works__box", "hidden_image", "active", "works_box-anim");
+
+// animation 
+  const animItems = document.querySelectorAll("._anim-items");
+
+  if (animItems.length > 0) {
+    window.addEventListener('scroll', animationScrolling);
+
+    function animationScrolling() {
+      for (let index = 0; index < animItems.length; index++) {
+        const animItem = animItems[index];
+        const animItemHeight = animItem.offsetHeight;
+        const animItemOffset = offsetFunc(animItem).top;
+        const animStart = 4;
+
+        let animItemPoint = window.innerHeight - animItemHeight / animStart;
+        if (animItemHeight > window.innerHeight) {
+          animItemPoint = window.innerHeight - window.innerHeight / animStart;
+        }
+
+        if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+          animItem.classList.add("_anim-active");
+        } else {
+          if (!animItem.classList.contains('_active-no-hide')) {
+            animItem.classList.remove("_anim-active");
+          }
+        }
+      }
+    }
+
+    function offsetFunc(el) {
+      const rect = el.getBoundingClientRect();
+      const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft
+      }
+    }
+
+    setTimeout(() => {
+      animationScrolling();
+    }, 300);
+  }
+});
